@@ -2,6 +2,7 @@ package com.example.appapoyo;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -37,8 +38,8 @@ public class MainActivity extends AppCompatActivity {
                 // Verifica si las credenciales son válidas
                 if (enteredUsername.equals(VALID_USERNAME) && enteredPassword.equals(VALID_PASSWORD)) {
                     // Las credenciales son válidas, redirige a la siguiente actividad
-                    // Intent intent = new Intent(LoginActivity.this, NextActivity.class);
-                    //startActivity(intent);
+                    Intent intent = new Intent(MainActivity.this, registro_usuarios.class);
+                    startActivity(intent);
                 } else {
                     // Las credenciales son inválidas, muestra un mensaje de error
                     Toast.makeText(MainActivity.this, "Nombre de usuario o contraseña incorrectos", Toast.LENGTH_SHORT).show();
