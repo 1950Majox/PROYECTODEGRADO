@@ -51,6 +51,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 // Aquí puedes implementar la lógica para crear una nueva cuenta.
+                Intent intent = new Intent(MainActivity.this, registro_usuarios.class);
+                startActivity(intent);
             }
         });
     }

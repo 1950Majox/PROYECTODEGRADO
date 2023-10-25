@@ -13,6 +13,18 @@
         android:theme="@style/Theme.APPAPOYO"
         tools:targetApi="31">
         <activity
+            android:name=".erer"
+            android:exported="false" />
+        <activity
+            android:name=".subtareas"
+            android:exported="false" />
+        <activity
+            android:name=".pantalla_actividades"
+            android:exported="false" />
+        <activity
+            android:name=".actividades"
+            android:exported="false" />
+        <activity
             android:name=".registro_usuarios"
             android:exported="false" />
         <activity
