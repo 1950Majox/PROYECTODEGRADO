@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "423976354150",
+    "project_id": "apoyoapp-e1603",
+    "storage_bucket": "apoyoapp-e1603.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:423976354150:android:6d6f281a0d3940c7e048a7",
+        "android_client_info": {
+          "package_name": "com.example.appapoyo"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD6A1yEGmMEzG7DffOtQSwG4kSyKha2X8I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
