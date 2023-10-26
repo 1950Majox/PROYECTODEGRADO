@@ -1,4 +1,9 @@
 <resources>
     <string name="app_name">APPAPOYO</string>
     <string name="firstName" />
+    <string name="iniciar_sesion">Iniciar sesión</string>
+    <string name="contrasenia">Contraseña</string>
+    <string name="crear_cuenta">Crear cuenta</string>
+    <string name="bienvenido">Bienvenido a la Aplicación de Apoyo</string>
+    <string name="nombre_de_usuario">Nombre de usuario</string>
 </resources>

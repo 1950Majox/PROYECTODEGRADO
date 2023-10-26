@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
                 // Verifica si las credenciales son válidas
                 if (enteredUsername.equals(VALID_USERNAME) && enteredPassword.equals(VALID_PASSWORD)) {
                     // Las credenciales son válidas, redirige a la siguiente actividad
-                    Intent intent = new Intent(MainActivity.this, registro_usuarios.class);
+                    Intent intent = new Intent(MainActivity.this, pantalla_actividadesp.class);
                     startActivity(intent);
                 } else {
                     // Las credenciales son inválidas, muestra un mensaje de error
