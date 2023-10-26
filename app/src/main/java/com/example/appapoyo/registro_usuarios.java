@@ -53,5 +53,6 @@ public class registro_usuarios extends AppCompatActivity {
                 }
             }
         });
+
     }
 }
