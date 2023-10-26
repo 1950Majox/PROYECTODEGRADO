@@ -16,4 +16,5 @@
     <string name="opcion_8">Opción 8</string>
     <string name="txt_titulo">TextView</string>
     <string name="actividades">ACTIVIDADES</string>
+    <string name="registrar_usuario" />
 </resources>

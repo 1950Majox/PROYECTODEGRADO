@@ -2,7 +2,7 @@ package com.example.appapoyo;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.annotation.SuppressLint;
+
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
@@ -16,9 +16,10 @@ public class registro_usuarios extends AppCompatActivity {
 
     private EditText firstNameEditText, lastNameEditText, emailEditText, passwordEditText, paraleloEditText;
     private RadioGroup userTypeRadioGroup;
+    private RadioButton estudiante_boton,profesor_boton;
     private Button registerButton;
 
-    @SuppressLint("WrongViewCast")
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,8 +30,8 @@ public class registro_usuarios extends AppCompatActivity {
         emailEditText = findViewById(R.id.email);
         passwordEditText = findViewById(R.id.password);
         paraleloEditText = findViewById(R.id.paralelo);
-        userTypeRadioGroup = findViewById(R.id.studentRadioButton);
-        userTypeRadioGroup = findViewById(R.id.teacherRadioButton);
+        estudiante_boton = findViewById(R.id.estudiante_boton);
+        profesor_boton = findViewById(R.id.profesor_boton);
         registerButton = findViewById(R.id.registerButton);
 
         registerButton.setOnClickListener(new View.OnClickListener() {

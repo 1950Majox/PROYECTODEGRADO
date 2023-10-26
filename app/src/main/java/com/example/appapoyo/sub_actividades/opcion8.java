@@ -1,9 +1,7 @@
 package com.example.appapoyo.sub_actividades;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
-
 import com.example.appapoyo.R;
 
 public class opcion8 extends AppCompatActivity {
