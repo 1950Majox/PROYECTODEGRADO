@@ -6,4 +6,118 @@
     android:layout_height="match_parent"
     tools:context=".pantalla_actividadesp">
 
+    <TextView
+        android:id="@+id/txtTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:text="@string/actividades"
+        android:textSize="48sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/option1Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="52dp"
+        android:text="@string/opcion_1"
+        app:layout_constraintEnd_toStartOf="@+id/option2Button"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtTitulo" />
+
+    <Button
+        android:id="@+id/option2Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/option1Button"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="92dp"
+        android:text="@string/opcion_2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtTitulo" />
+
+    <Button
+        android:id="@+id/option3Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="76dp"
+        android:text="@string/opcion_3"
+        app:layout_constraintEnd_toStartOf="@+id/option4Button"
+        app:layout_constraintHorizontal_bias="0.456"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/option1Button" />
+
+    <Button
+        android:id="@+id/option4Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/option1Button"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="76dp"
+        android:layout_marginEnd="88dp"
+        android:text="@string/opcion_4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/option2Button" />
+
+    <Button
+        android:id="@+id/option5Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="68dp"
+        android:text="@string/opcion_5"
+        app:layout_constraintEnd_toStartOf="@+id/option6Button"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/option3Button" />
+
+    <Button
+        android:id="@+id/option6Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/option1Button"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="68dp"
+        android:layout_marginEnd="88dp"
+        android:text="@string/opcion_6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/option4Button" />
+
+    <Button
+        android:id="@+id/option7Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="@string/opcion_7"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/option8Button"
+        app:layout_constraintHorizontal_bias="0.522"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/option5Button"
+        app:layout_constraintVertical_bias="0.171" />
+
+    <Button
+        android:id="@+id/option8Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/option1Button"
+        android:layout_centerHorizontal="true"
+        android:layout_marginEnd="92dp"
+        android:layout_marginBottom="184dp"
+        android:text="@string/opcion_8"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/option6Button"
+        app:layout_constraintVertical_bias="1.0" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

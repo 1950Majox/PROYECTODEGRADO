@@ -6,4 +6,14 @@
     <string name="crear_cuenta">Crear cuenta</string>
     <string name="bienvenido">Bienvenido a la Aplicación de Apoyo</string>
     <string name="nombre_de_usuario">Nombre de usuario</string>
+    <string name="opcion_1">Opción 1</string>
+    <string name="opcion_2">Opción 2</string>
+    <string name="opcion_3">Opción 3</string>
+    <string name="opcion_4">Opción 4</string>
+    <string name="opcion_5">Opción 5</string>
+    <string name="opcion_6">Opción 6</string>
+    <string name="opcion_7">Opción 7</string>
+    <string name="opcion_8">Opción 8</string>
+    <string name="txt_titulo">TextView</string>
+    <string name="actividades">ACTIVIDADES</string>
 </resources>
