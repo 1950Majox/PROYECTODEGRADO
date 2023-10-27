@@ -10,20 +10,20 @@
         android:id="@+id/firstName"
         android:layout_width="360dp"
         android:layout_height="48dp"
-        android:layout_marginTop="140dp"
+        android:layout_marginTop="40dp"
         android:hint="Nombres"
         android:inputType="text"
         android:minHeight="48dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.549"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
     <EditText
         android:id="@+id/lastName"
         android:layout_width="360dp"
         android:layout_height="48dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="16dp"
         android:hint="Apellidos"
         android:inputType="text"
         android:minHeight="48dp"
@@ -34,24 +34,10 @@
         tools:ignore="MissingConstraints" />
 
     <EditText
-        android:id="@+id/username"
-        android:layout_width="360dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="24dp"
-        android:hint="Nombre de usuario"
-        android:inputType="text"
-        android:minHeight="48dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.549"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lastName"
-        tools:ignore="MissingConstraints" />
-
-    <EditText
         android:id="@+id/email"
         android:layout_width="360dp"
         android:layout_height="48dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="28dp"
         android:hint="Correo electrónico"
         android:inputType="textEmailAddress"
         android:minHeight="48dp"
@@ -76,26 +62,26 @@
         tools:ignore="MissingConstraints" />
 
     <EditText
-        android:id="@+id/paralelo"
+        android:id="@+id/username"
         android:layout_width="360dp"
         android:layout_height="48dp"
-        android:layout_marginTop="20dp"
-        android:hint="Paralelo"
+        android:layout_marginTop="28dp"
+        android:hint="Nombre de usuario"
         android:inputType="text"
         android:minHeight="48dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.549"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/password" />
+        app:layout_constraintTop_toBottomOf="@+id/lastName"
+        tools:ignore="MissingConstraints" />
 
     <RadioGroup
         android:id="@+id/userTypeRadioGroup"
         android:layout_width="362dp"
         android:layout_height="46dp"
-        android:layout_marginTop="8dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.313"
+        app:layout_constraintHorizontal_bias="0.326"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/paralelo">
 
@@ -116,16 +102,69 @@
             app:layout_constraintStart_toEndOf="@+id/studentRadioButton" />
     </RadioGroup>
 
+    <EditText
+        android:id="@+id/paralelo"
+        android:layout_width="360dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+        android:hint="Paralelo"
+        android:inputType="text"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.549"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/password" />
+
+
     <Button
         android:id="@+id/registerButton"
-        android:layout_width="290dp"
+        android:layout_width="212dp"
         android:layout_height="48dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginBottom="20dp"
         android:text="CREAR CUENTA"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/userTypeRadioGroup"
-        app:layout_constraintVertical_bias="0.25" />
+        app:layout_constraintTop_toBottomOf="@+id/gestion"
+        app:layout_constraintVertical_bias="0.483" />
+
+    <EditText
+        android:id="@+id/gestion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:ems="10"
+        android:inputType="date"
+        android:minHeight="48dp"
+        android:text="@string/gestion"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titulo_gestion"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/titulo_gestion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Gestion"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.176"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userTypeRadioGroup" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="@string/titulo_registrar_cuenta"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

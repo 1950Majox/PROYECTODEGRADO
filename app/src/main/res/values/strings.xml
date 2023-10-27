@@ -17,4 +17,8 @@
     <string name="txt_titulo">TextView</string>
     <string name="actividades">ACTIVIDADES</string>
     <string name="registrar_usuario" />
+    <string name="gestion" />
+    <string name="gestion1">Gestion</string>
+    <string name="titulo_registrar" />
+    <string name="titulo_registrar_cuenta">Registrar Cuenta</string>
 </resources>
