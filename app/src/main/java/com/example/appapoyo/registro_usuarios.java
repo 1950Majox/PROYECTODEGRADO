@@ -12,7 +12,7 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
-import com.google.firebase.auth.FirebaseAuth;
+
 
 
 public class registro_usuarios extends AppCompatActivity {
@@ -52,6 +52,7 @@ public class registro_usuarios extends AppCompatActivity {
                 String gestionStr = gestion.getText().toString();
                 int gestion1 = 0;  // Valor por defecto en caso de error
 
+
                 try {
                     gestion1 = Integer.parseInt(gestionStr);
                     if (gestion1 < 2022 || gestion1 > 2030) {
@@ -73,6 +74,9 @@ public class registro_usuarios extends AppCompatActivity {
                 }
 
             }
+
+
+
         });
 
 
