@@ -12,12 +12,15 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
+import com.google.firebase.firestore.FirebaseFirestore;
 
+import java.util.HashMap;
+import java.util.Map;
 
 
 public class registro_usuarios extends AppCompatActivity {
 
-    private EditText firstNameEditText, lastNameEditText, emailEditText, passwordEditText, paraleloEditText, gestion;
+    private EditText firstNameEditText, lastNameEditText, emailEditText, passwordEditText, paraleloEditText,userName, gestion;
 
 
     private RadioGroup userTypeRadioGroup;
@@ -31,7 +34,7 @@ public class registro_usuarios extends AppCompatActivity {
 
         firstNameEditText = findViewById(R.id.firstName);
         lastNameEditText = findViewById(R.id.lastName);
-
+        userName= findViewById(R.id.username);
         emailEditText = findViewById(R.id.email);
         passwordEditText = findViewById(R.id.password);
         paraleloEditText = findViewById(R.id.paralelo);
@@ -50,6 +53,15 @@ public class registro_usuarios extends AppCompatActivity {
                 String password = passwordEditText.getText().toString();
                 String paralelo = paraleloEditText.getText().toString();
                 String gestionStr = gestion.getText().toString();
+
+
+                int selectedUserTypeId = userTypeRadioGroup.getCheckedRadioButtonId();
+                RadioButton selectedUserType = findViewById(selectedUserTypeId);
+
+                if (selectedUserType != null) {
+                    String userType = selectedUserType.getText().toString();
+                    // Aquí puedes realizar la lógica de registro con los datos ingresados.
+                }
                 int gestion1 = 0;  // Valor por defecto en caso de error
 
 
@@ -64,20 +76,14 @@ public class registro_usuarios extends AppCompatActivity {
 
                     // Maneja la excepción si el valor ingresado no es un entero válido.
                 }
-
-                int selectedUserTypeId = userTypeRadioGroup.getCheckedRadioButtonId();
-                RadioButton selectedUserType = findViewById(selectedUserTypeId);
-
-                if (selectedUserType != null) {
-                    String userType = selectedUserType.getText().toString();
-                    // Aquí puedes realizar la lógica de registro con los datos ingresados.
-                }
+                FirebaseFirestore db = FirebaseFirestore.getInstance();
 
             }
 
 
 
         });
+
 
 
 
