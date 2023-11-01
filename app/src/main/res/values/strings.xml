@@ -21,4 +21,10 @@
     <string name="gestion1">Gestion</string>
     <string name="titulo_registrar" />
     <string name="titulo_registrar_cuenta">Registrar Cuenta</string>
+    <string name="actividad_1">LA COMUNICACION</string>
+    <string name="actividad_2">El CUENTO</string>
+    <string name="actividad_3">EL ALFABETO</string>
+    <string name="actividad_4">EL SUSTANTIVO Y ARTÍCULO</string>
+    <string name="actividad_5">PALABRAS DIMINUTIVAS Y AUMENTATIVAS</string>
+    <string name="actividad_6">LAS SILABAS</string>
 </resources>

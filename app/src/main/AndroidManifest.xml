@@ -13,12 +13,7 @@
         android:theme="@style/Theme.APPAPOYO"
         tools:targetApi="31"
         android:name=".MyApplication">
-        <activity
-            android:name=".sub_actividades.opcion8"
-            android:exported="false" />
-        <activity
-            android:name=".sub_actividades.opcion7"
-            android:exported="false" />
+
         <activity
             android:name=".sub_actividades.opcion6"
             android:exported="false" />

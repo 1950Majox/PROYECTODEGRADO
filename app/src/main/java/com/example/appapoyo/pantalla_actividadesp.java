@@ -7,15 +7,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import com.example.appapoyo.sub_actividades.opcion1;
-import com.example.appapoyo.sub_actividades.opcion2;
-import com.example.appapoyo.sub_actividades.opcion3;
-import com.example.appapoyo.sub_actividades.opcion4;
-import com.example.appapoyo.sub_actividades.opcion5;
-import com.example.appapoyo.sub_actividades.opcion6;
-import com.example.appapoyo.sub_actividades.opcion7;
-import com.example.appapoyo.sub_actividades.opcion8;
-
 
 public class pantalla_actividadesp extends AppCompatActivity {
     private Button option1Button,option2Button, option3Button, option4Button,
@@ -89,23 +80,7 @@ public class pantalla_actividadesp extends AppCompatActivity {
                 startActivity(opcion6);
             }
         });
-        option7Button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Abrir la actividad secundaria correspondiente (cambia a la actividad que desees)
-                Intent opcion7 = new Intent(pantalla_actividadesp.this, com.example.appapoyo.sub_actividades.opcion7.class);
-                startActivity(opcion7);
-            }
-        });
 
-        option8Button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Abrir la actividad secundaria correspondiente (cambia a la actividad que desees)
-                Intent opcion8 = new Intent(pantalla_actividadesp.this, com.example.appapoyo.sub_actividades.opcion8.class);
-                startActivity(opcion8);
-            }
-        });
         // ... Repite esto para las otras opciones
     }
 }
