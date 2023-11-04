@@ -24,8 +24,7 @@ public class pantalla_actividadesp extends AppCompatActivity {
         Button option4Button = findViewById(R.id.option4Button);
         Button option5Button = findViewById(R.id.option5Button);
         Button option6Button = findViewById(R.id.option6Button);
-        Button option7Button = findViewById(R.id.option7Button);
-        Button option8Button = findViewById(R.id.option8Button);
+
         // ... Repite esto para las otras opciones
 
         // Configurar OnClickListener para cada botón
