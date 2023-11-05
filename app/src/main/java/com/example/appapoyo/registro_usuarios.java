@@ -171,7 +171,11 @@ public class registro_usuarios extends AppCompatActivity {
                                     // El nombre de usuario es único, puedes continuar con el registro.
                                     // Guarda los datos del nuevo usuario en Firebase.
                                     // Luego, muestra un mensaje de éxito.
+
                                     saveUserDataToFirebase(username);
+                                    // Haz que el Toast dure más tiempo (usando Toast.LENGTH_LONG)
+                                    Toast.makeText(getApplicationContext(), "BIENVENIDO tu nombre de usuario es:  " + username, Toast.LENGTH_LONG).show();
+
                                 }
                             } else {
                                 // Maneja cualquier error que pueda ocurrir durante la consulta.

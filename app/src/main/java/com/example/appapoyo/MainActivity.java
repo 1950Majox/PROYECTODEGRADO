@@ -19,15 +19,14 @@ import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QueryDocumentSnapshot;
 
 public class MainActivity extends AppCompatActivity {
 
     private EditText usernameEditText, passwordEditText;
     private Button loginButton, createAccountButton;
 
-    // Supongamos que estas son las credenciales válidas
-   // private static final String VALID_USERNAME = "usuario";
-    //private static final String VALID_PASSWORD = "contrasena";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,12 +38,16 @@ public class MainActivity extends AppCompatActivity {
         loginButton = findViewById(R.id.loginButton);
         createAccountButton = findViewById(R.id.createAccountButton);
 
+
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 // Obtén los valores ingresados por el usuario
                 String nombre_usuario = usernameEditText.getText().toString().trim();
                 String password_usuario = passwordEditText.getText().toString().trim();
+
+
+
 
                 DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("usuarios");
                 Query query = databaseReference.orderByChild("nombre_usuario").equalTo(nombre_usuario);
@@ -71,14 +74,32 @@ public class MainActivity extends AppCompatActivity {
                             .addOnSuccessListener(queryDocumentSnapshots -> {
                                 if (!queryDocumentSnapshots.isEmpty()) {
                                     // Se encontró un usuario con el nombre de usuario ingresado.
-                                    // Verifica si la contraseña coincide.
-                                    // Si las credenciales son correctas, redirige al usuario a la siguiente pantalla.
-                                    // Si son incorrectas, muestra un mensaje de error.
-                                    // Puedes usar un Toast para mostrar mensajes al usuario.
-                                    Toast.makeText(MainActivity.this, "Bienvenido:"+nombre_usuario, Toast.LENGTH_SHORT).show();
-                                    Intent intent = new Intent(MainActivity.this, pantalla_actividadesp.class);
-                                    startActivity(intent);
-                                    finish();
+                                    // Ahora, obtén el tipo de usuario de ese usuario.
+                                    // Esto se supone que el campo de tipoUsuario existe en tu documento de usuario.
+                                    // Reemplaza "tipoUsuario" por el nombre real del campo en tu base de datos.
+                                    for (QueryDocumentSnapshot document : queryDocumentSnapshots) {
+                                        String tipoUsuario = document.getString("tipo_usuario");
+                                        if (tipoUsuario != null) {
+                                            // Verifica el tipo de usuario y redirige a la pantalla correspondiente.
+                                            if (tipoUsuario.equals("Estudiante")) {
+                                                // Redirige a la pantalla de Estudiante.
+                                                Intent intentEstudiante = new Intent(MainActivity.this, pantalla_actividadesp.class);
+                                                startActivity(intentEstudiante);
+                                                finish();
+                                            } else if (tipoUsuario.equals("Profesor")) {
+                                                // Redirige a la pantalla de Profesor.
+                                                Intent intentProfesor = new Intent(MainActivity.this, pantalla_profesor.class);
+                                                startActivity(intentProfesor);
+                                                finish();
+                                            } else {
+                                                // Tipo de usuario desconocido. Maneja la situación de acuerdo a tus necesidades.
+                                                Toast.makeText(MainActivity.this, "Tipo de usuario desconocido", Toast.LENGTH_SHORT).show();
+                                            }
+                                        } else {
+                                            // El campo "tipoUsuario" está vacío en el documento de usuario.
+                                            Toast.makeText(MainActivity.this, "Tipo de usuario no especificado", Toast.LENGTH_SHORT).show();
+                                        }
+                                    }
                                 } else {
                                     // No se encontró un usuario con el nombre de usuario ingresado.
                                     // Muestra un mensaje de error.
@@ -89,6 +110,9 @@ public class MainActivity extends AppCompatActivity {
                                 // Maneja cualquier error que pueda ocurrir durante la consulta.
                                 Toast.makeText(MainActivity.this, "Error al verificar las credenciales", Toast.LENGTH_SHORT).show();
                             });
+
+
+
                 }
             }
         });
