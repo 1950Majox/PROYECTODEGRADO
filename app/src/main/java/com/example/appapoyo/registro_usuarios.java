@@ -6,6 +6,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -66,7 +67,7 @@ public class registro_usuarios extends AppCompatActivity {
                 String paralelo = paraleloEditText.getText().toString().trim();
 
                 String nombreUsuario = generateUsername(firstName, lastName, paralelo);
-                checkIfUsernameIsUnique(nombreUsuario);
+
 
 
                 userTypeRadioGroup=findViewById(R.id.userTypeRadioGroup);
@@ -118,83 +119,19 @@ public class registro_usuarios extends AppCompatActivity {
                             }
                         });
                 ////////////////////////////////////////////////////////
-                FirebaseFirestore db = FirebaseFirestore.getInstance();
-                CollectionReference usuariosRef = db.collection("usuarios");
-
-                usuariosRef
-                        .whereEqualTo("nombres", firstName)
-                        .whereEqualTo("apellidos", lastName)
-                        .whereEqualTo("email", email)
-                        .whereEqualTo("nombre_usuario", nombreUsuario)
-                        .whereEqualTo("paralelo", paralelo)
-
-                        .get()
-                        .addOnCompleteListener(task -> {
-                                    if (task.isSuccessful()) {
-                                        QuerySnapshot querySnapshot = task.getResult();
-                                        if (querySnapshot != null && !querySnapshot.isEmpty()) {
-                                            // Datos duplicados encontrados en la base de datos, muestra un mensaje de error.
-                                            Toast.makeText(getApplicationContext(), "Los datos ya están registrados. Proporciona información única.", Toast.LENGTH_SHORT).show();
-                                        }
-                                    } else {
-                                        // Maneja cualquier error que pueda ocurrir durante la consulta.
-                                        Toast.makeText(getApplicationContext(), "Error al verificar los datos", Toast.LENGTH_SHORT).show();
-                                    }
-                                });
 
                 //////////////////////////////////////////////////////////////
-
             }
             /////////////////////////////////////////////
             private String generateUsername(String nombres, String apellidos, String paralelo) {
                 // Genera un nombre de usuario único a partir de los datos
                 // Por ejemplo, puedes combinar las iniciales de los nombres y apellidos con el paralelo.
-                String nombreUsuario = nombres.substring(0, 1) + apellidos.substring(0, 1) + paralelo;
+                String nombreUsuario = nombres.substring(0,1)+ apellidos.substring(0, 1) + paralelo;
                 return nombreUsuario;
-            }
 
+            }
             //////////////////////////////////////////////
-            private void checkIfUsernameIsUnique(String username) {
-                FirebaseFirestore db = FirebaseFirestore.getInstance();
-                CollectionReference usuariosRef = db.collection("usuarios");
 
-                usuariosRef
-                        .whereEqualTo("nombre_usuario", username)
-                        .get()
-                        .addOnCompleteListener(task -> {
-                            if (task.isSuccessful()) {
-                                QuerySnapshot querySnapshot = task.getResult();
-                                if (querySnapshot != null && !querySnapshot.isEmpty()) {
-                                    // El nombre de usuario ya existe, muestra un mensaje de error.
-                                    Toast.makeText(getApplicationContext(), "El nombre de usuario ya está en uso. Por favor, elige otro.", Toast.LENGTH_SHORT).show();
-                                } else {
-                                    // El nombre de usuario es único, puedes continuar con el registro.
-                                    // Guarda los datos del nuevo usuario en Firebase.
-                                    // Luego, muestra un mensaje de éxito.
-
-                                    saveUserDataToFirebase(username);
-                                    // Haz que el Toast dure más tiempo (usando Toast.LENGTH_LONG)
-                                    Toast.makeText(getApplicationContext(), "BIENVENIDO tu nombre de usuario es:  " + username, Toast.LENGTH_LONG).show();
-
-                                }
-                            } else {
-                                // Maneja cualquier error que pueda ocurrir durante la consulta.
-                                Toast.makeText(getApplicationContext(), "Error al verificar el nombre de usuario", Toast.LENGTH_SHORT).show();
-                            }
-                        });
-            }
-
-            private void saveUserDataToFirebase(String username) {
-
-                // Aquí puedes implementar la lógica para guardar los datos del usuario en Firebase.
-                // Por ejemplo:
-                // - Crea un objeto Usuario con los datos.
-                // - Agrega el objeto Usuario a la colección de usuarios en Firebase.
-
-                // Después de guardar los datos en Firebase, muestra un mensaje de éxito.
-
-                Toast.makeText(getApplicationContext(), "Bienvenido, tu cuenta se registró correctamente: " + username, Toast.LENGTH_LONG).show();
-            }
             ///////////////////////////////////////////////////
 
 

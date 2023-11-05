@@ -86,11 +86,13 @@ public class MainActivity extends AppCompatActivity {
                                                 Intent intentEstudiante = new Intent(MainActivity.this, pantalla_actividadesp.class);
                                                 startActivity(intentEstudiante);
                                                 finish();
+                                                Toast.makeText(MainActivity.this, "Bienvenido Estudiante: "+ nombre_usuario, Toast.LENGTH_SHORT).show();
                                             } else if (tipoUsuario.equals("Profesor")) {
                                                 // Redirige a la pantalla de Profesor.
                                                 Intent intentProfesor = new Intent(MainActivity.this, pantalla_profesor.class);
                                                 startActivity(intentProfesor);
                                                 finish();
+                                                Toast.makeText(MainActivity.this, "Bienvenido Profesor: "+nombre_usuario, Toast.LENGTH_SHORT).show();
                                             } else {
                                                 // Tipo de usuario desconocido. Maneja la situación de acuerdo a tus necesidades.
                                                 Toast.makeText(MainActivity.this, "Tipo de usuario desconocido", Toast.LENGTH_SHORT).show();
