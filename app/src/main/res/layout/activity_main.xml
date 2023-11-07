@@ -14,20 +14,20 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="52dp"
+        android:layout_marginTop="64dp"
         android:gravity="center"
         android:text="@string/bienvenido"
+        android:textColorHint="#0B0A0A"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.187"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/username"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="346dp"
+        android:layout_height="49dp"
         android:layout_marginTop="204dp"
         android:hint="@string/nombre_de_usuario"
         android:inputType="text"
@@ -39,8 +39,8 @@
 
     <EditText
         android:id="@+id/password"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="350dp"
+        android:layout_height="48dp"
         android:layout_marginTop="32dp"
         android:hint="@string/contrasenia"
         android:inputType="textPassword"
@@ -51,21 +51,23 @@
 
     <Button
         android:id="@+id/loginButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="317dp"
+        android:layout_height="48dp"
         android:layout_marginTop="52dp"
+        android:background="@color/celeste"
         android:text="@string/iniciar_sesion"
+        android:textColor="#FFE0B2"
         android:textColorHighlight="#03A9F4"
         android:textColorLink="#046D9C"
-        android:background="@color/celeste"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/password" />
 
     <Button
         android:id="@+id/createAccountButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="311dp"
+        android:layout_height="48dp"
+        android:background="@color/verde"
         android:text="@string/crear_cuenta"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

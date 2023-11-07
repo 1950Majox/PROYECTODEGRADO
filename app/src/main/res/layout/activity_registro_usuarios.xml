@@ -67,6 +67,7 @@
         android:layout_width="212dp"
         android:layout_height="48dp"
         android:layout_marginBottom="20dp"
+        android:background="@color/verde"
         android:text="CREAR CUENTA"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

@@ -18,79 +18,73 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/option1Button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginStart="56dp"
-        android:layout_marginTop="52dp"
-        android:text="@string/actividad_1"
-        app:layout_constraintEnd_toStartOf="@+id/option2Button"
-        app:layout_constraintHorizontal_bias="0.0"
+
+    <ImageView
+        android:id="@+id/opcion1"
+        android:layout_width="173dp"
+        android:layout_height="142dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/opcion1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtTitulo" />
 
-    <Button
-        android:id="@+id/option2Button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/option1Button"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="52dp"
-        android:layout_marginEnd="92dp"
-        android:text="@string/actividad_2"
+    <ImageView
+        android:id="@+id/opcion2"
+        android:layout_width="173dp"
+        android:layout_height="142dp"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/opcion2"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.51"
+        app:layout_constraintStart_toEndOf="@+id/opcion1"
         app:layout_constraintTop_toBottomOf="@+id/txtTitulo" />
 
-    <Button
-        android:id="@+id/option3Button"
-        android:layout_width="120dp"
-        android:layout_height="62dp"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="76dp"
-        android:text="@string/actividad_3"
-        app:layout_constraintEnd_toStartOf="@+id/option4Button"
-        app:layout_constraintHorizontal_bias="0.456"
+    <ImageView
+        android:id="@+id/opcion3"
+        android:layout_width="173dp"
+        android:layout_height="142dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="28dp"
+        android:src="@drawable/opcion3"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/option1Button" />
+        app:layout_constraintTop_toBottomOf="@+id/opcion1" />
 
-    <Button
-        android:id="@+id/option4Button"
-        android:layout_width="188dp"
-        android:layout_height="74dp"
-        android:layout_below="@+id/option1Button"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="76dp"
-        android:layout_marginEnd="64dp"
-        android:text="@string/actividad_4"
+    <ImageView
+        android:id="@+id/opcion4"
+        android:layout_width="173dp"
+        android:layout_height="142dp"
+        android:layout_marginTop="28dp"
+        android:src="@drawable/opcion4"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/option2Button" />
+        app:layout_constraintStart_toEndOf="@+id/opcion3"
+        app:layout_constraintTop_toBottomOf="@+id/opcion2" />
 
-    <Button
-        android:id="@+id/option5Button"
-        android:layout_width="155dp"
-        android:layout_height="73dp"
-        android:layout_centerHorizontal="true"
-        android:layout_marginStart="52dp"
-        android:layout_marginTop="68dp"
-        android:text="@string/actividad_5"
-        app:layout_constraintEnd_toStartOf="@+id/option6Button"
-        app:layout_constraintHorizontal_bias="0.0"
+    <ImageView
+        android:id="@+id/opcion5"
+        android:layout_width="173dp"
+        android:layout_height="142dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:src="@drawable/opcion5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/option3Button" />
+        app:layout_constraintTop_toBottomOf="@+id/opcion3" />
 
-    <Button
-        android:id="@+id/option6Button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/option1Button"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="68dp"
-        android:layout_marginEnd="88dp"
-        android:text="@string/actividad_6"
+    <ImageView
+        android:id="@+id/opcion6"
+        android:layout_width="173dp"
+        android:layout_height="142dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:src="@drawable/opcion6"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/option4Button" />
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/opcion5"
+        app:layout_constraintTop_toBottomOf="@+id/opcion4" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+

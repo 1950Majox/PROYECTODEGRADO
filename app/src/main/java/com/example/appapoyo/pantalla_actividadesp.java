@@ -6,80 +6,80 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
+import android.widget.ImageView;
+
+import com.example.appapoyo.sub_actividades.opcion1;
 
 
 public class pantalla_actividadesp extends AppCompatActivity {
-    private Button option1Button,option2Button, option3Button, option4Button,
-            option5Button, option6Button, option7Button, option8Button;
+
+    private ImageButton opcion1, opcion2, opcion3, opcion4, opcion5, opcion6;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pantalla_actividadesp);
 
-        // Recuperar elementos de la interfaz de usuario
-        Button option1Button = findViewById(R.id.option1Button);
-        Button option2Button = findViewById(R.id.option2Button);
-        Button option3Button = findViewById(R.id.option3Button);
-        Button option4Button = findViewById(R.id.option4Button);
-        Button option5Button = findViewById(R.id.option5Button);
-        Button option6Button = findViewById(R.id.option6Button);
+        ImageView opcion1 = findViewById(R.id.opcion1);
+        ImageView opcion2 = findViewById(R.id.opcion2);
+        ImageView opcion3 = findViewById(R.id.opcion3);
+        ImageView opcion4 = findViewById(R.id.opcion4);
+        ImageView opcion5 = findViewById(R.id.opcion5);
+        ImageView opcion6 = findViewById(R.id.opcion6);
 
-        // ... Repite esto para las otras opciones
 
-        // Configurar OnClickListener para cada botón
-        option1Button.setOnClickListener(new View.OnClickListener() {
+        ImageView option1Button = findViewById(R.id.opcion1);
+        opcion1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Abrir la actividad secundaria correspondiente (cambia a la actividad que desees)
+
                 Intent opcion1 = new Intent(pantalla_actividadesp.this, com.example.appapoyo.sub_actividades.opcion1.class);
                 startActivity(opcion1);
             }
         });
-
-        option2Button.setOnClickListener(new View.OnClickListener() {
+        opcion2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Abrir la actividad secundaria correspondiente (cambia a la actividad que desees)
+
                 Intent opcion2 = new Intent(pantalla_actividadesp.this, com.example.appapoyo.sub_actividades.opcion2.class);
                 startActivity(opcion2);
             }
         });
-        option3Button.setOnClickListener(new View.OnClickListener() {
+        opcion3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Abrir la actividad secundaria correspondiente (cambia a la actividad que desees)
+
                 Intent opcion3 = new Intent(pantalla_actividadesp.this, com.example.appapoyo.sub_actividades.opcion3.class);
                 startActivity(opcion3);
             }
         });
-
-        option4Button.setOnClickListener(new View.OnClickListener() {
+        opcion4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Abrir la actividad secundaria correspondiente (cambia a la actividad que desees)
+
                 Intent opcion4 = new Intent(pantalla_actividadesp.this, com.example.appapoyo.sub_actividades.opcion4.class);
                 startActivity(opcion4);
             }
         });
-        option5Button.setOnClickListener(new View.OnClickListener() {
+        opcion5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Abrir la actividad secundaria correspondiente (cambia a la actividad que desees)
+
                 Intent opcion5 = new Intent(pantalla_actividadesp.this, com.example.appapoyo.sub_actividades.opcion5.class);
                 startActivity(opcion5);
             }
         });
-
-        option6Button.setOnClickListener(new View.OnClickListener() {
+        opcion6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Abrir la actividad secundaria correspondiente (cambia a la actividad que desees)
+
                 Intent opcion6 = new Intent(pantalla_actividadesp.this, com.example.appapoyo.sub_actividades.opcion6.class);
                 startActivity(opcion6);
             }
         });
 
-        // ... Repite esto para las otras opciones
+
     }
+
 }
