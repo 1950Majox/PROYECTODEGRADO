@@ -14,7 +14,7 @@ import com.example.appapoyo.sub_actividades.opcion1;
 
 public class pantalla_actividadesp extends AppCompatActivity {
 
-    private ImageButton opcion1, opcion2, opcion3, opcion4, opcion5, opcion6;
+    private ImageButton opcion1, opcion3, opcion4, opcion5, opcion6;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,7 +22,7 @@ public class pantalla_actividadesp extends AppCompatActivity {
         setContentView(R.layout.activity_pantalla_actividadesp);
 
         ImageView opcion1 = findViewById(R.id.opcion1);
-        ImageView opcion2 = findViewById(R.id.opcion2);
+
         ImageView opcion3 = findViewById(R.id.opcion3);
         ImageView opcion4 = findViewById(R.id.opcion4);
         ImageView opcion5 = findViewById(R.id.opcion5);
@@ -38,14 +38,7 @@ public class pantalla_actividadesp extends AppCompatActivity {
                 startActivity(opcion1);
             }
         });
-        opcion2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
 
-                Intent opcion2 = new Intent(pantalla_actividadesp.this, com.example.appapoyo.sub_actividades.opcion2.class);
-                startActivity(opcion2);
-            }
-        });
         opcion3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
