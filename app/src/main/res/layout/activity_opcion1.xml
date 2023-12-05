@@ -5,15 +5,56 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".sub_actividades.opcion1">
-
+    <!-- Título de la actividad -->
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/txtTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="52dp"
-        android:text="@string/titulo_po1"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:text="LA COMUNICACIÓN"
+        android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Pregunta 1 -->
+
+    <!-- Respuestas de la Pregunta 1 -->
+    <TextView
+        android:id="@+id/txtQuestion1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:text="¿Cuándo vemos imágenes con dibujos, que tipos de comunicación es?"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtTitle" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtQuestion1">
+
+        <RadioButton
+            android:id="@+id/radioButton1_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="comunicación verbal" />
+
+        <RadioButton
+            android:id="@+id/radioButton1_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="comunicación escrita" />
+
+        <!-- Agrega más respuestas según sea necesario -->
+
+    </RadioGroup>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
